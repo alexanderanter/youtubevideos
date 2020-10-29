@@ -1,3 +1,7 @@
+# This is a exercise repo I created for myself
+
+Main branch will be empty with only instructions, I will put my finished app in the Solution branch
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
