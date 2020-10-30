@@ -15,7 +15,7 @@ const VideoDetail = ({ video }) => {
         <div className="ui embed div">
           <iframe
             title="Video Player"
-            src={`https://www.youtube.com/embed/${video.id.videoId}`}
+            src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1`}
           />
         </div>
         <p>{video.snippet.description}</p>

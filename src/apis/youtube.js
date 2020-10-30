@@ -1,7 +1,7 @@
 //import axios
 import axios from "axios";
 
-const KEY = "AIzaSyD03QBYCOYhU20442sEXyu8ENstOHYOiFQ";
+const KEY = "AIzaSyAdWkgk8000oSw4kRk0P5N9IFR3QJtNdrw";
 // "AIzaSyAdWkgk8000oSw4kRk0P5N9IFR3QJtNdrw";
 // create KEY variabel with the value of  AIzaSyD03QBYCOYhU20442sEXyu8ENstOHYOiFQ
 // create a function thats exported by default and call the axios.create method
