@@ -42,12 +42,12 @@ class App extends react.Component {
         <div className="ui container">
           <SearchBar onFormSubmit={this.onTermSubmit} />
         </div>
-        <div class="ui grid">
-          <div class="row">
-            <div class="eleven wide column">
+        <div className="ui grid">
+          <div className="row">
+            <div className="eleven wide column">
               <VideoDetail video={this.state.selectedVideo} />
             </div>
-            <div class="five wide column">
+            <div className="five wide column">
               <VideoList
                 onVideoSelect={this.onVideoSelect}
                 videos={this.state.videos}
