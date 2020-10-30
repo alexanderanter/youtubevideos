@@ -35,7 +35,6 @@ class SearchBar extends React.Component {
             />
           </div>
         </form>
-        searchbar
       </div>
     );
   }

@@ -10,10 +10,10 @@ class App extends react.Component {
   // create a life cycle method that clicks in after the component have loaded in
   componentDidMount() {
     // to select a default video
+    this.onTermSubmit("Rick Astley - Never Gonna Give You Up");
   }
 
-  // create a onTermSymbit asynchronous function that takes in a term as a parameter,
-
+  // create a onTermSubmit asynchronous function that takes in a term as a parameter,
   onTermSubmit = async (term) => {
     // inside of onTermSubmit, create a response object that awaits the youtube.get("/search") with the q parameter that got the value of term
 
@@ -23,17 +23,17 @@ class App extends react.Component {
       },
     });
     // set the state so that videos get the value from the response and selectedVideo get the first video.
-    /// create a onVideoSelect arrow function that takes video as a parameter,
 
-    const onVideoSelect = (video) => {
-      // set the state of selectedVideo to video.
-      this.setState((this.state.selectedVideo: video));
-    };
     this.setState({
       videos: response.data.items,
       selectedVideo: response.data.items[0],
     });
-    console.log(response);
+  };
+  /// create a onVideoSelect arrow function that takes video as a parameter,
+
+  onVideoSelect = (video) => {
+    // set the state of selectedVideo to video.
+    this.setState({ selectedVideo: video });
   };
   // create a render function and inside a return statement that have a div named ui container
   render() {
@@ -41,6 +41,19 @@ class App extends react.Component {
       <div>
         <div className="ui container">
           <SearchBar onFormSubmit={this.onTermSubmit} />
+        </div>
+        <div class="ui grid">
+          <div class="row">
+            <div class="eleven wide column">
+              <VideoDetail video={this.state.selectedVideo} />
+            </div>
+            <div class="five wide column">
+              <VideoList
+                onVideoSelect={this.onVideoSelect}
+                videos={this.state.videos}
+              />
+            </div>
+          </div>
         </div>
       </div>
     );
